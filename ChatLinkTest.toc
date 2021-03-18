@@ -4,4 +4,10 @@
 ## Author: KyrosKrane Sylvanblade
 ## Notes: Test harness for ChatLink library
 
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibBase64-1.0\LibBase64-1.0.lua
+Libs\LibSHA1\LibSHA1-1.0.xml
+Libs\ChatLink-1.0\ChatLink-1.0.lua
+
 ChatLinkTest.lua
