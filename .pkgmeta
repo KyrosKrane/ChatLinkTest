@@ -1,17 +1,16 @@
 # Files and directories beginning with a dot (such as .git) are automatically ignored, as is the pgkmeta file itself.
 ignore:
   - README.md
-  - *.rockspec
-  - bench.lua
-  - spec
-  - LibStub/tests
+  - Libs/LibStub/tests
+  - Libs/LibBase64-1.0/LibStub
+  - Libs/LibSHA1/WoW_Tests
 
 externals:
   # Prereqs
   Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
   Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
   Libs/LibSHA1: https://github.com/KyrosKrane/LibSHA1
-  Libs/libbase64-1.0: https://repos.wowace.com/wow/libbase64-1-0
+  Libs/LibBase64-1.0: https://repos.wowace.com/wow/libbase64-1-0
   Libs/ChatLink-1.0: 
     url: https://github.com/KyrosKrane/ChatLink.git
     branch: PublicPrivate
