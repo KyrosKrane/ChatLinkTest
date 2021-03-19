@@ -18,6 +18,7 @@
 local addonName, CLT = ...
 local ChatLink = LibStub("ChatLink-1.0")
 
+
 --#########################################
 --# Click handling
 --#########################################
@@ -50,7 +51,7 @@ end
 
 local function GenerateTC(Handler, DisplayText, Data, SkipFormat, CallbackID, PublicMessageID)
 	-- create link
-	local Link, ReturnedCallbackID = ChatLink:CreateChatLink(DisplayText)
+	local Link, ReturnedCallbackID = ChatLink:CreateChatLink(DisplayText, Data, SkipFormat, CallbackID, PublicMessageID)
 
 	-- verify successful creation
 	if not ReturnedCallbackID then
@@ -66,7 +67,7 @@ local function GenerateTC(Handler, DisplayText, Data, SkipFormat, CallbackID, Pu
 
 	-- Display the test case
 	DEFAULT_CHAT_FRAME:AddMessage("Click this link for " .. Link .. ".")
-end
+end -- GenerateTC()
 
 
 --#########################################
@@ -75,3 +76,13 @@ end
 
 GenerateTC("HandleClick", "Test case 1: Basic link with display text only")
 GenerateTC("SecondHandleClick", "Test case 2: Alternate click handler")
+GenerateTC("HandleClick", "Test case 3: Link with data", "12.3, 45.6")
+
+-- Create a formatted link for testing the SkipFormat parameter
+local TestCase4 = WrapTextInColorCode(">>Test case 4: Link with custom formatting, no data<<", "FF00FF00")
+GenerateTC("HandleClick", TestCase4, nil, true)
+
+local TestCase5 = WrapTextInColorCode(">>Test case 5: Link with custom formatting, with data<<", "FF00FF00")
+GenerateTC("HandleClick", TestCase5, "apple banana", true)
+
+
