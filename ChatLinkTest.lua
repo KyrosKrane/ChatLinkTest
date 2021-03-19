@@ -85,4 +85,10 @@ GenerateTC("HandleClick", TestCase4, nil, true)
 local TestCase5 = WrapTextInColorCode(">>Test case 5: Link with custom formatting, with data<<", "FF00FF00")
 GenerateTC("HandleClick", TestCase5, "apple banana", true)
 
+GenerateTC("HandleClick", "Test case 6: Link with custom callback ID", nil, nil, "CLT-Callback-Test6")
+GenerateTC("HandleClick", "Test case 7: Link with data and custom callback ID", "cherry", nil, "CLT-Callback-Test7")
+local TestCase8 = WrapTextInColorCode(">>Test case 8: Link with skipformat and custom callback ID<<", "FF00FF00")
+GenerateTC("HandleClick", TestCase8, nil, true, "CLT-Callback-Test8")
+local TestCase9 = WrapTextInColorCode(">>Test case 9: Link with data, skipformat, and custom callback ID<<", "FF00FF00")
+GenerateTC("HandleClick", TestCase9, "cherry", true, "CLT-Callback-Test9")
 
