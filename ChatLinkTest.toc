@@ -1,5 +1,5 @@
 ## Interface: 90005
-## Title: Test harness for ChatLink library
+## Title: ChatLink Test Suite
 ## Version: v1
 ## Author: KyrosKrane Sylvanblade
 ## Notes: Test harness for ChatLink library
